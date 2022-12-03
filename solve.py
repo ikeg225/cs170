@@ -1,6 +1,9 @@
 import random
+import math
+import networkx as nx
+from new_cost import partc
+from constants import score, read_input, validate_output, visualize, run_all, tar
 
-# Start writing code here...
 def solve(G: nx.Graph):
     # TODO implement this function with your solver
     # Assign a team to v with G.nodes[v]['team'] = team_id
@@ -57,10 +60,13 @@ def solve(G: nx.Graph):
     print(current)
     return G
 
-G = read_input('inputs/large36.in')
-solve(G)
-print("Nodes in G: ", G.nodes(data=True))
-validate_output(G)
+# G = read_input('inputs/small1.in')
+# solve(G)
+# print("Nodes in G: ", G.nodes(data=True))
+# validate_output(G)
 
-visualize(G)
-score(G)
+# visualize(G)
+# score(G)
+
+run_all(solve, 'inputs', 'outputs')
+tar('outputs')

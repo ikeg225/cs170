@@ -1,3 +1,7 @@
+import numpy as np
+import math
+from constants import score
+
 #returns new Cp value
 def cp(b_vector, i, j, norm_b, v):
     return math.exp(70 * np.sqrt((norm_b) ** 2) - (b_vector[i] ** 2) - (b_vector[j] ** 2) + ((b_vector[i] - (1 / v)) ** 2) + ((b_vector[j] + (1 / v)) ** 2))
